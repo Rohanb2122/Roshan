@@ -1,0 +1,143 @@
+:root {
+    --bg-color: #fcfaf5; /* Creamy White Background */
+    --text-color: #333333; /* Dark Grey Text */
+    --header-color: #2c3e50; /* Dark Blue for Header */
+    --border-color: #e0e0e0;
+    --font-family: 'Poppins', sans-serif;
+    
+    /* Spice Colors */
+    --snacks-color: #fbc02d; /* Turmeric Yellow */
+    --meals-color: #4CAF50; /* Coriander Green */
+    --beverages-color: #f57c00; /* Saffron Orange */
+}
+
+body {
+    background-color: #e9e5dc;
+    font-family: var(--font-family);
+    color: var(--text-color);
+    margin: 0;
+    padding: 2rem 1rem;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--bg-color);
+    padding: 2.5rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1.5rem;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--header-color);
+    margin: 0;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #666;
+    margin: 0.5rem 0 0 0;
+}
+
+.menu-category h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 2.5rem 0 1.5rem 0;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+/* Applying Spice Colors to Categories */
+.snacks-category h2 { border-bottom: 3px solid var(--snacks-color); }
+.snacks-category .item-price { color: var(--snacks-color); }
+
+.meals-category h2 { border-bottom: 3px solid var(--meals-color); }
+.meals-category .item-price { color: var(--meals-color); }
+
+.beverages-category h2 { border-bottom: 3px solid var(--beverages-color); }
+.beverages-category .item-price { color: var(--beverages-color); }
+
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.item-details {
+    margin-right: 1.5rem;
+}
+
+.item-name {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.item-description {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 0.25rem;
+}
+
+.item-price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    color: #555;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.contact-item .icon {
+    color: var(--header-color);
+    font-size: 1.1rem;
+    margin-right: 0.8rem;
+    width: 20px;
+}
+
+.contact-item p {
+    margin: 0;
+}
+
+.copyright {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+@media (max-width: 600px) {
+    body { padding: 1rem 0.5rem; }
+    .container { padding: 1.5rem; }
+    header h1 { font-size: 2.2rem; }
+    .menu-item { flex-direction: column; align-items: flex-start; }
+    .item-price { margin-top: 0.5rem; }
+}
